@@ -7,6 +7,6 @@
 	dh $@
 
 override_dh_install:
-	dh_auto_install
+	dh_install
 	# fix privacy-breach-generic issues:
 	rm -rf ./debian/kibana/usr/share/ngcp-panel/static/kibana/vendor/bootstrap/less/tests/
