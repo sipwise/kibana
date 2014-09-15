@@ -1,0 +1,17 @@
+Source: kibana
+Section: web
+Priority: extra
+Maintainer: Sipwise Development Team <support@sipwise.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: http://sipwise.com/
+
+Package: kibana
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Description: browser based analytics and search interface to Logstash
+ Kibana is an open source, browser based analytics and search
+ interface to Logstash and other timestamped data sets stored in
+ ElasticSearch. Kibana strives to be easy to get started with,
+ while also being flexible and powerful.

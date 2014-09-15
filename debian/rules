@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+# export DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_install:
+	dh_auto_install
+	# fix privacy-breach-generic issues:
+	rm -rf ./debian/kibana/usr/share/ngcp-panel/static/kibana/vendor/bootstrap/less/tests/
