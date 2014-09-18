@@ -4,10 +4,10 @@ Author: Michael Prokop <mprokop@sipwise.com>
 Forwarded: not-needed
 Last-Update: 2014-09-17
 
---- /dev/null
-+++ kibana-3.1.0/.gitreview
-@@ -0,0 +1,4 @@
-+[gerrit]
-+host=gerrit.mgm.sipwise.com
-+port=29418
-+project=kibana
+--- kibana-3.1.0/.gitreview	2014-09-18 15:23:30.041846381 +0200
++++ kibana-3.1.0/.gitreview	2014-09-18 15:24:16.865844525 +0200
+@@ -2,3 +2,4 @@
+ host=gerrit.mgm.sipwise.com
+ port=29418
+ project=kibana
++# Dummy patch MT#9053
