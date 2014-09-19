@@ -1,1 +1,4 @@
-000001_NGCP_Kibana_init.json
+000001_NGCP_Summary_Kibana_dashboard.json
+000002_NGCP_Search_Kibana_dashboard.json
+000003_NGCP_VoIP_Kibana_dashboard.json
+000004_NGCP_Errors_Kibana_dashboard.json
