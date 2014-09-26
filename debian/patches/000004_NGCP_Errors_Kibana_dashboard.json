@@ -1,7 +1,7 @@
 Index: kibana/src/app/dashboards/NGCP-Errors.json
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ kibana/src/app/dashboards/NGCP-Errors.json	2014-09-19 16:20:02.963388621 +0200
++++ kibana/src/app/dashboards/NGCP-Errors.json	2014-09-26 17:29:57.494305970 +0200
 @@ -0,0 +1,750 @@
 +{
 +  "title": "NGCP Errors",
@@ -675,7 +675,7 @@ Index: kibana/src/app/dashboards/NGCP-Errors.json
 +  "failover": false,
 +  "index": {
 +    "interval": "day",
-+    "pattern": "[logstash-]YYYY.MM.DD",
++    "pattern": "[sipwise-]YYYY.MM.DD",
 +    "default": "NO_TIME_FILTER_OR_INDEX_PATTERN_NOT_MATCHED",
 +    "warm_fields": true
 +  },

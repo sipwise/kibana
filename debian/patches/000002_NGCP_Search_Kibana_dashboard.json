@@ -1,7 +1,7 @@
 Index: kibana/src/app/dashboards/NGCP-Search.json
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ kibana/src/app/dashboards/NGCP-Search.json	2014-09-19 12:24:39.115647236 +0200
++++ kibana/src/app/dashboards/NGCP-Search.json	2014-09-26 18:02:49.342227823 +0200
 @@ -0,0 +1,285 @@
 +{
 +  "title": "NGCP Search",
@@ -66,7 +66,7 @@ Index: kibana/src/app/dashboards/NGCP-Search.json
 +          "type": "text",
 +          "loadingEditor": false,
 +          "mode": "markdown",
-+          "content": "Please specify search criteria in field \"Query\" using [Lucene Query String syntax](http://www.elasticsearch.org/guide/en/kibana/current/working-with-queries-and-filters.html), samples:\n\n  * search all records with specific cal-id: [call-id:s1a2m3p4l5e@10.0.0.1](/log/index.html#/dashboard/file/NGCP-Search.json?query=call-id:s1a2m3p4l5e@10.0.0.1)\n  * search all calls from all subscribers matching 12345...: [cli:12345*](/log/index.html#/dashboard/file/NGCP-Search.json?query=cli:12345*)\n  * search all calls to subscriber 12345 or voicemail: [cld:12345 OR cld:2000](/log/index.html#/dashboard/file/NGCP-Search.json?query=cld:12345%20OR%20cld:voicemail)\n  * search all calls from/to subscriber 12345: [subs:12345](/log/index.html#/dashboard/file/NGCP-Search.json?query=subs:12345)",
++          "content": "Please specify search criteria in field \"Query\" using [Lucene Query String syntax](http://www.elasticsearch.org/guide/en/kibana/current/working-with-queries-and-filters.html), samples:\n\n  * search all records with specific cal-id: [call-id:\"s1a2m3p4l5e@10.0.0.1\"](/log/index.html#/dashboard/file/NGCP-Search.json?query=call-id:%5C%22s1a2m3p4l5e@10.0.0.1%5C%22)\n  * search all calls from all subscribers matching 12345...: [cli:12345*](/log/index.html#/dashboard/file/NGCP-Search.json?query=cli:12345*)\n  * search all calls to subscriber 12345 or voicemail: [cld:12345 OR cld:2000](/log/index.html#/dashboard/file/NGCP-Search.json?query=cld:12345%20OR%20cld:voicemail)\n  * search all calls from/to subscriber 12345: [subs:12345](/log/index.html#/dashboard/file/NGCP-Search.json?query=subs:12345)",
 +          "style": {},
 +          "title": "Search samples"
 +        },
@@ -145,7 +145,7 @@ Index: kibana/src/app/dashboards/NGCP-Search.json
 +          "legend_counts": true,
 +          "zerofill": true,
 +          "derivative": false,
-+          "error": "QueryParsingException[[logstash-2014.09.18] Failed to parse query [{{ARGS.query || '*'}}]]"
++          "error": false
 +        }
 +      ],
 +      "notice": false
@@ -159,7 +159,7 @@ Index: kibana/src/app/dashboards/NGCP-Search.json
 +      "panels": [
 +        {
 +          "title": "All events",
-+          "error": "QueryParsingException[[logstash-2014.09.18] Failed to parse query [{{ARGS.query || '*'}}]]",
++          "error": false,
 +          "span": 12,
 +          "editable": true,
 +          "group": [
@@ -210,7 +210,7 @@ Index: kibana/src/app/dashboards/NGCP-Search.json
 +  "failover": false,
 +  "index": {
 +    "interval": "day",
-+    "pattern": "[logstash-]YYYY.MM.DD",
++    "pattern": "[sipwise-]YYYY.MM.DD",
 +    "default": "NO_TIME_FILTER_OR_INDEX_PATTERN_NOT_MATCHED",
 +    "warm_fields": true
 +  },
