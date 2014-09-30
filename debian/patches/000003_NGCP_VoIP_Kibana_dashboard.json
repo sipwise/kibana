@@ -1,8 +1,8 @@
 Index: kibana/src/app/dashboards/NGCP-VoIP.json
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ kibana/src/app/dashboards/NGCP-VoIP.json	2014-09-19 16:19:53.303388798 +0200
-@@ -0,0 +1,1185 @@
++++ kibana/src/app/dashboards/NGCP-VoIP.json	2014-09-30 15:03:50.888169234 +0200
+@@ -0,0 +1,1209 @@
 +{
 +  "title": "NGCP VoIP",
 +  "services": {
@@ -55,21 +55,21 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +        },
 +        "5": {
 +          "id": 5,
-+          "color": "#1F78C1",
-+          "alias": "INVITE",
-+          "pin": true,
-+          "type": "lucene",
-+          "enable": true,
-+          "query": "sip-method:\"INVITE\" AND sip-comment:\"New request on lb\""
-+        },
-+        "6": {
-+          "id": 6,
-+          "color": "#E24D42",
++          "color": "#BF1B00",
 +          "alias": "5XX",
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
 +          "query": "sip-reply-code:5*"
++        },
++        "6": {
++          "id": 6,
++          "color": "#E24D42",
++          "alias": "6XX",
++          "pin": true,
++          "type": "lucene",
++          "enable": true,
++          "query": "sip-reply-code:6*"
 +        },
 +        "7": {
 +          "id": 7,
@@ -187,6 +187,15 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "type": "lucene",
 +          "enable": true,
 +          "query": "sip-method:\"UPDATE\" AND sip-comment:\"New request on lb\""
++        },
++        "20": {
++          "id": 20,
++          "color": "#1F78C1",
++          "alias": "INVITE",
++          "pin": true,
++          "type": "lucene",
++          "enable": true,
++          "query": "sip-method:\"INVITE\" AND sip-comment:\"New request on lb\""
 +        }
 +      },
 +      "ids": [
@@ -209,7 +218,8 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +        16,
 +        17,
 +        18,
-+        19
++        19,
++        20
 +      ]
 +    },
 +    "filter": {
@@ -261,7 +271,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "value_field": null,
 +          "auto_int": true,
 +          "resolution": 100,
-+          "interval": "10s",
++          "interval": "30s",
 +          "fill": 3,
 +          "linewidth": 3,
 +          "timezone": "browser",
@@ -378,7 +388,8 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +              16,
 +              17,
 +              18,
-+              19
++              19,
++              20
 +            ]
 +          },
 +          "tmode": "terms",
@@ -408,6 +419,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +              2,
 +              3,
 +              4,
++              5,
 +              6
 +            ]
 +          },
@@ -423,7 +435,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          },
 +          "auto_int": true,
 +          "resolution": 100,
-+          "interval": "10s",
++          "interval": "30s",
 +          "intervals": [
 +            "auto",
 +            "1s",
@@ -471,7 +483,9 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "field": "sip-reply-code",
 +          "exclude": [
 +            "null",
-+            "<null>"
++            "<null>",
++            "",
++            ""
 +          ],
 +          "missing": false,
 +          "other": false,
@@ -509,13 +523,14 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +              16,
 +              17,
 +              18,
-+              19
++              19,
++              20
 +            ]
 +          },
 +          "tmode": "terms",
 +          "tstat": "total",
 +          "valuefield": "sip-reply-code",
-+          "title": "Codes"
++          "title": "VoIP Codes"
 +        },
 +        {
 +          "span": 10,
@@ -540,6 +555,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +              2,
 +              3,
 +              4,
++              5,
 +              6
 +            ]
 +          },
@@ -555,7 +571,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          },
 +          "auto_int": true,
 +          "resolution": 100,
-+          "interval": "10s",
++          "interval": "30s",
 +          "intervals": [
 +            "auto",
 +            "1s",
@@ -647,7 +663,8 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +              16,
 +              17,
 +              18,
-+              19
++              19,
++              20
 +            ]
 +          },
 +          "tmode": "terms",
@@ -673,7 +690,6 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "queries": {
 +            "mode": "selected",
 +            "ids": [
-+              5,
 +              8,
 +              9,
 +              10,
@@ -685,7 +701,8 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +              16,
 +              17,
 +              18,
-+              19
++              19,
++              20
 +            ]
 +          },
 +          "annotate": {
@@ -700,7 +717,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          },
 +          "auto_int": true,
 +          "resolution": 100,
-+          "interval": "10s",
++          "interval": "30s",
 +          "intervals": [
 +            "auto",
 +            "1s",
@@ -748,7 +765,9 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "field": "sip-method",
 +          "exclude": [
 +            "null",
-+            "<null>"
++            "<null>",
++            "",
++            ""
 +          ],
 +          "missing": false,
 +          "other": false,
@@ -786,7 +805,8 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +              16,
 +              17,
 +              18,
-+              19
++              19,
++              20
 +            ]
 +          },
 +          "tmode": "terms",
@@ -828,7 +848,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          },
 +          "auto_int": true,
 +          "resolution": 100,
-+          "interval": "10s",
++          "interval": "30s",
 +          "intervals": [
 +            "auto",
 +            "1s",
@@ -883,7 +903,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "field": "severity",
 +          "span": 2,
 +          "type": "terms",
-+          "title": "Top 10 terms in field severity",
++          "title": "Severity",
 +          "exclude": [],
 +          "missing": true,
 +          "other": true,
@@ -920,7 +940,8 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +              16,
 +              17,
 +              18,
-+              19
++              19,
++              20
 +            ]
 +          },
 +          "tmode": "terms",
@@ -970,7 +991,8 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +              16,
 +              17,
 +              18,
-+              19
++              19,
++              20
 +            ]
 +          },
 +          "tmode": "terms",
@@ -1020,7 +1042,8 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +              16,
 +              17,
 +              18,
-+              19
++              19,
++              20
 +            ]
 +          },
 +          "tmode": "terms",
@@ -1092,7 +1115,8 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +              16,
 +              17,
 +              18,
-+              19
++              19,
++              20
 +            ]
 +          },
 +          "field_list": false,
