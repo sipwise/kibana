@@ -24,7 +24,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "status:1*"
++          "query": "sip-reply-code:1*"
 +        },
 +        "2": {
 +          "id": 2,
@@ -33,7 +33,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "status:2*"
++          "query": "sip-reply-code:2*"
 +        },
 +        "3": {
 +          "id": 3,
@@ -42,7 +42,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "status:3*"
++          "query": "sip-reply-code:3*"
 +        },
 +        "4": {
 +          "id": 4,
@@ -51,7 +51,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "status:4*"
++          "query": "sip-reply-code:4*"
 +        },
 +        "5": {
 +          "id": 5,
@@ -60,7 +60,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"INVITE\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"INVITE\" AND sip-comment:\"New request on lb\""
 +        },
 +        "6": {
 +          "id": 6,
@@ -69,7 +69,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "status:5*"
++          "query": "sip-reply-code:5*"
 +        },
 +        "7": {
 +          "id": 7,
@@ -78,7 +78,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"REGISTER\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"REGISTER\" AND sip-comment:\"New request on lb\""
 +        },
 +        "8": {
 +          "id": 8,
@@ -87,7 +87,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"ACK\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"ACK\" AND sip-comment:\"New request on lb\""
 +        },
 +        "9": {
 +          "id": 9,
@@ -96,7 +96,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"CANCEL\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"CANCEL\" AND sip-comment:\"New request on lb\""
 +        },
 +        "10": {
 +          "id": 10,
@@ -105,7 +105,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"BYE\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"BYE\" AND sip-comment:\"New request on lb\""
 +        },
 +        "11": {
 +          "id": 11,
@@ -114,7 +114,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"OPTIONS\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"OPTIONS\" AND sip-comment:\"New request on lb\""
 +        },
 +        "12": {
 +          "id": 12,
@@ -123,7 +123,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"PRACK\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"PRACK\" AND sip-comment:\"New request on lb\""
 +        },
 +        "13": {
 +          "id": 13,
@@ -132,7 +132,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"SUBSCRIBE\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"SUBSCRIBE\" AND sip-comment:\"New request on lb\""
 +        },
 +        "14": {
 +          "id": 14,
@@ -141,7 +141,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"NOTIFY\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"NOTIFY\" AND sip-comment:\"New request on lb\""
 +        },
 +        "15": {
 +          "id": 15,
@@ -150,7 +150,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"PUBLISH\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"PUBLISH\" AND sip-comment:\"New request on lb\""
 +        },
 +        "16": {
 +          "id": 16,
@@ -159,7 +159,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"INFO\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"INFO\" AND sip-comment:\"New request on lb\""
 +        },
 +        "17": {
 +          "id": 17,
@@ -168,7 +168,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"REFER\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"REFER\" AND sip-comment:\"New request on lb\""
 +        },
 +        "18": {
 +          "id": 18,
@@ -177,7 +177,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"MESSAGE\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"MESSAGE\" AND sip-comment:\"New request on lb\""
 +        },
 +        "19": {
 +          "id": 19,
@@ -186,7 +186,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "pin": true,
 +          "type": "lucene",
 +          "enable": true,
-+          "query": "method:\"UPDATE\" AND comment:\"New request on lb\""
++          "query": "sip-method:\"UPDATE\" AND sip-comment:\"New request on lb\""
 +        }
 +      },
 +      "ids": [
@@ -468,7 +468,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "editable": true,
 +          "type": "terms",
 +          "loadingEditor": false,
-+          "field": "status",
++          "field": "sip-reply-code",
 +          "exclude": [
 +            "null",
 +            "<null>"
@@ -514,7 +514,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          },
 +          "tmode": "terms",
 +          "tstat": "total",
-+          "valuefield": "status",
++          "valuefield": "sip-reply-code",
 +          "title": "Codes"
 +        },
 +        {
@@ -607,7 +607,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +        {
 +          "height": "200px",
 +          "chart": "pie",
-+          "field": "method",
++          "field": "sip-method",
 +          "span": 2,
 +          "type": "terms",
 +          "title": "SIP packets type",
@@ -745,7 +745,7 @@ Index: kibana/src/app/dashboards/NGCP-VoIP.json
 +          "editable": true,
 +          "type": "terms",
 +          "loadingEditor": false,
-+          "field": "method",
++          "field": "sip-method",
 +          "exclude": [
 +            "null",
 +            "<null>"

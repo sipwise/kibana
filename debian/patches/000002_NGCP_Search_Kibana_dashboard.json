@@ -66,7 +66,7 @@ Index: kibana/src/app/dashboards/NGCP-Search.json
 +          "type": "text",
 +          "loadingEditor": false,
 +          "mode": "markdown",
-+          "content": "Please specify search criteria in field \"Query\" using [Lucene Query String syntax](http://www.elasticsearch.org/guide/en/kibana/current/working-with-queries-and-filters.html), samples:\n\n  * search all records with specific cal-id: [call-id:\"s1a2m3p4l5e@10.0.0.1\"](/log/index.html#/dashboard/file/NGCP-Search.json?query=call-id:%5C%22s1a2m3p4l5e@10.0.0.1%5C%22)\n  * search all calls from all subscribers matching 12345...: [cli:12345*](/log/index.html#/dashboard/file/NGCP-Search.json?query=cli:12345*)\n  * search all calls to subscriber 12345 or voicemail: [cld:12345 OR cld:2000](/log/index.html#/dashboard/file/NGCP-Search.json?query=cld:12345%20OR%20cld:voicemail)\n  * search all calls from/to subscriber 12345: [subs:12345](/log/index.html#/dashboard/file/NGCP-Search.json?query=subs:12345)",
++          "content": "Please specify search criteria in field \"Query\" using [Lucene Query String syntax](http://www.elasticsearch.org/guide/en/kibana/current/working-with-queries-and-filters.html), samples:\n\n  * search all records with specific cal-id: [sip-call-id:\"s1a2m3p4l5e@10.0.0.1\"](/log/index.html#/dashboard/file/NGCP-Search.json?query=sip-call-id:%5C%22s1a2m3p4l5e@10.0.0.1%5C%22)\n  * search all calls from all subscribers matching 12345...: [sip-from-user:12345*](/log/index.html#/dashboard/file/NGCP-Search.json?query=sip-from-user:12345*)\n  * search all calls to subscriber 12345 or voicemail: [sip-to-user:12345 OR sip-to-user:2000](/log/index.html#/dashboard/file/NGCP-Search.json?query=sip-to-user:12345%20OR%20sip-to-user:voicemail)\n  * search all calls from/to subscriber 12345: [ngcp-subscriber:12345](/log/index.html#/dashboard/file/NGCP-Search.json?query=ngcp-subscriber:12345)",
 +          "style": {},
 +          "title": "Search samples"
 +        },
@@ -179,8 +179,8 @@ Index: kibana/src/app/dashboards/NGCP-Search.json
 +          "overflow": "min-height",
 +          "fields": [
 +            "@timestamp",
-+            "cli",
-+            "cld",
++            "sip-from-user",
++            "sip-to-user",
 +            "message"
 +          ],
 +          "localTime": true,
