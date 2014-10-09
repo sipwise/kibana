@@ -1,3 +1,21 @@
+kibana (3.1.0-1+0~mr3.5.0.0) unstable; urgency=medium
+
+  [ Michael Prokop ]
+  * [d029f71] Fix override_dh_install command sequence
+  * [51ccfa3] MT#7505 Add .gitreview file for kibana
+  * [01e89da] MT#9053 Provide lintian source overrides
+  * [d6b3038] MT#9053 Provide .gitreview file via debian/patches/
+  * [6a89146] MT#9053 Ignore .gitreview file instead of using a patch file for it
+
+  [ Alexander Lutay ]
+  * [e6c0425] MT#8215 MT#9053 Add initial NGCP dashboards for Kibana
+  * [90ef2b7] MT#8215 Split Kibana patch to patches per dashboard (+typo fix '}')
+  * [da25995] MT#8215 Replace default index name s/logstash-/sipwise-/
+  * [5460c3a] MT#8215 Update elasticsearch fields name to final version
+  * [92fd19a] MT#8215 Add 6xx VoIP Codes to NGCP-VoIP.json + layout update
+
+ -- Alexander Lutay <alutay@sipwise.com>  Thu, 09 Oct 2014 14:36:46 +0200
+
 kibana (3.1.0-1) unstable; urgency=low
 
   * Initial release
