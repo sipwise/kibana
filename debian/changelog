@@ -1,3 +1,9 @@
+kibana (3.1.0-1+0~mr5.3.0.0) unstable; urgency=medium
+
+  * New release.
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Wed, 22 Mar 2017 10:53:48 +0100
+
 kibana (3.1.0-1+0~mr5.2.0.0) unstable; urgency=medium
 
   * New release.
