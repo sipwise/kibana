@@ -1,6 +1,0 @@
-Index: kibana/.npmrc
-===================================================================
---- /dev/null
-+++ kibana/.npmrc
-@@ -0,0 +1 @@
-+registry = https://npm-registry.sipwise.com/
